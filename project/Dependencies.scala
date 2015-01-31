@@ -22,14 +22,15 @@ object Dependencies {
 
   object V {
     val scalding  = "0.9.1"
-    val hadoop    = "0.20.1-dev"
+    val hadoop    = "2.6.0-qds-0.1.0-SNAPSHOT"
     val specs2    = "2.3.11"
     // Add versions for your additional libraries here...
   }
 
   object Libraries {
     val scaldingCore = "com.twitter"                %%  "scalding-core"       % V.scalding
-    val hadoopCore   = "com.qubole"                 %   "hadoop"              % V.hadoop       % "provided"
+    val hadoopMapred   = "org.apache.hadoop"                 %   "hadoop-mapreduce-client-app"              % V.hadoop       % "provided"
+    val hadoopCore   = "org.apache.hadoop"                 %   "hadoop-common"              % V.hadoop       % "provided"
     // Add additional libraries from mvnrepository.com (SBT syntax) here...
 
     // Scala (test only)
